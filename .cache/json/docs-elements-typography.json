@@ -1,0 +1,140 @@
+{
+    "pathContext": {
+        "page": {
+            "fileAbsolutePath": "/Users/smoclock/work/docs-template/src/docs/004-elements/005-typography.md",
+            "html": "<p>When writing your content, use the same HTML markup tags you are accustomed to. It is important to note that HEML bundles fixes for common issues with these tags so you are free to use them safely in email. They all support the <a href=\"/elements/overview#global-attributes\">global attributes</a>.</p>\n<p>All text should be in a header, paragraph, or list for your styling to work as expected.</p>\n<h2 id=\"headers\"><a href=\"#headers\" aria-hidden=\"true\" class=\"anchor\"><svg aria-hidden=\"true\" height=\"16\" version=\"1.1\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"></path></svg></a>Headers</h2>\n<div class=\"gatsby-highlight\">\n      <pre class=\"language-xml\"><code><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>h1</span><span class=\"token punctuation\">></span></span>Heading 1<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>h1</span><span class=\"token punctuation\">></span></span>\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>h2</span><span class=\"token punctuation\">></span></span>Heading 2<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>h2</span><span class=\"token punctuation\">></span></span>\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>h3</span><span class=\"token punctuation\">></span></span>Heading 3<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>h3</span><span class=\"token punctuation\">></span></span>\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>h4</span><span class=\"token punctuation\">></span></span>Heading 4<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>h4</span><span class=\"token punctuation\">></span></span>\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>h5</span><span class=\"token punctuation\">></span></span>Heading 5<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>h5</span><span class=\"token punctuation\">></span></span>\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>h6</span><span class=\"token punctuation\">></span></span>Heading 6<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>h6</span><span class=\"token punctuation\">></span></span>\n</code></pre>\n      </div>\n<h2 id=\"paragraphs\"><a href=\"#paragraphs\" aria-hidden=\"true\" class=\"anchor\"><svg aria-hidden=\"true\" height=\"16\" version=\"1.1\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"></path></svg></a>Paragraphs</h2>\n<div class=\"gatsby-highlight\">\n      <pre class=\"language-xml\"><code><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>p</span><span class=\"token punctuation\">></span></span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur officia vero consequatur quibusdam quo consequuntur explicabo, impedit ex qui aperiam.<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>p</span><span class=\"token punctuation\">></span></span>\n</code></pre>\n      </div>\n<h2 id=\"text-decoration-elements\"><a href=\"#text-decoration-elements\" aria-hidden=\"true\" class=\"anchor\"><svg aria-hidden=\"true\" height=\"16\" version=\"1.1\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"></path></svg></a>Text decoration elements</h2>\n<div class=\"gatsby-highlight\">\n      <pre class=\"language-xml\"><code><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>p</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>s</span><span class=\"token punctuation\">></span></span>Strikethrough<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>s</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>u</span><span class=\"token punctuation\">></span></span>Underlined<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>u</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>small</span><span class=\"token punctuation\">></span></span>Small<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>small</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>strong</span><span class=\"token punctuation\">></span></span>Bold<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>strong</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>em</span><span class=\"token punctuation\">></span></span>Italicized<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>em</span><span class=\"token punctuation\">></span></span>\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>p</span><span class=\"token punctuation\">></span></span>\n</code></pre>\n      </div>\n<h2 id=\"lists\"><a href=\"#lists\" aria-hidden=\"true\" class=\"anchor\"><svg aria-hidden=\"true\" height=\"16\" version=\"1.1\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"></path></svg></a>Lists</h2>\n<div class=\"gatsby-highlight\">\n      <pre class=\"language-xml\"><code><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>ul</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>li</span><span class=\"token punctuation\">></span></span>Item 1<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>li</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>li</span><span class=\"token punctuation\">></span></span>Item 2<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>li</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>li</span><span class=\"token punctuation\">></span></span>Item 3<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>li</span><span class=\"token punctuation\">></span></span>\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>ul</span><span class=\"token punctuation\">></span></span>\n\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>ol</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>li</span><span class=\"token punctuation\">></span></span>Item 1<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>li</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>li</span><span class=\"token punctuation\">></span></span>Item 2<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>li</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>li</span><span class=\"token punctuation\">></span></span>Item 3<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>li</span><span class=\"token punctuation\">></span></span>\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>ol</span><span class=\"token punctuation\">></span></span>\n</code></pre>\n      </div>",
+            "headings": [
+                {
+                    "value": "Headers",
+                    "depth": 2
+                },
+                {
+                    "value": "Paragraphs",
+                    "depth": 2
+                },
+                {
+                    "value": "Text decoration elements",
+                    "depth": 2
+                },
+                {
+                    "value": "Lists",
+                    "depth": 2
+                }
+            ],
+            "frontmatter": {
+                "title": "Typography",
+                "description": "Use the same HTML markup in HEML for your typography"
+            }
+        },
+        "nav": [
+            {
+                "title": "Getting Started",
+                "children": [
+                    {
+                        "title": "Overview",
+                        "path": "/docs/getting-started/overview"
+                    },
+                    {
+                        "title": "Usage",
+                        "path": "/docs/getting-started/usage"
+                    },
+                    {
+                        "title": "HEML Guide",
+                        "path": "/docs/getting-started/guide"
+                    }
+                ],
+                "redirectFrom": "/docs/getting-started",
+                "path": "/docs/getting-started/overview"
+            },
+            {
+                "title": "Email structure",
+                "children": [
+                    {
+                        "title": "Overview",
+                        "path": "/docs/email-structure/overview"
+                    },
+                    {
+                        "title": "Heml",
+                        "path": "/docs/email-structure/heml"
+                    },
+                    {
+                        "title": "Head",
+                        "path": "/docs/email-structure/head"
+                    },
+                    {
+                        "title": "Body",
+                        "path": "/docs/email-structure/body"
+                    },
+                    {
+                        "title": "",
+                        "path": "/docs/email-structure/raw"
+                    }
+                ],
+                "redirectFrom": "/docs/email-structure",
+                "path": "/docs/email-structure/overview"
+            },
+            {
+                "title": "Styling",
+                "children": [
+                    {
+                        "title": "Using CSS",
+                        "path": "/docs/styling/using-css"
+                    },
+                    {
+                        "title": "",
+                        "path": "/docs/styling/targeting-clients"
+                    },
+                    {
+                        "title": "Pseudo-Elements",
+                        "path": "/docs/styling/pseudo-elements"
+                    }
+                ],
+                "redirectFrom": "/docs/styling",
+                "path": "/docs/styling/using-css"
+            },
+            {
+                "title": "Elements",
+                "children": [
+                    {
+                        "title": "Overview",
+                        "path": "/docs/elements/overview"
+                    },
+                    {
+                        "title": "Layout",
+                        "path": "/docs/elements/layout"
+                    },
+                    {
+                        "title": "Meta Elements",
+                        "path": "/docs/elements/meta"
+                    },
+                    {
+                        "title": "Style",
+                        "path": "/docs/elements/style"
+                    },
+                    {
+                        "title": "Typography",
+                        "path": "/docs/elements/typography"
+                    },
+                    {
+                        "title": "Block",
+                        "path": "/docs/elements/block"
+                    },
+                    {
+                        "title": "Image",
+                        "path": "/docs/elements/image"
+                    },
+                    {
+                        "title": "Button",
+                        "path": "/docs/elements/button"
+                    },
+                    {
+                        "title": "Link",
+                        "path": "/docs/elements/link"
+                    }
+                ],
+                "redirectFrom": "/docs/elements",
+                "path": "/docs/elements/overview"
+            }
+        ]
+    }
+}

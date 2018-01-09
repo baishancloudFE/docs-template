@@ -1,0 +1,144 @@
+{
+    "pathContext": {
+        "page": {
+            "fileAbsolutePath": "/Users/smoclock/work/docs-template/src/docs/004-elements/007-image.md",
+            "html": "<p>Images are a powerful tool in your emails. However, they are widely misused. You should not use images for displaying text, buttons, or anything else that has a native equivalent. This leads to bloated emails, invisible content, and accessibility issues. Each image translates to a <code>&#x3C;img /></code> tag in HTML.</p>\n<h2 id=\"examples\"><a href=\"#examples\" aria-hidden=\"true\" class=\"anchor\"><svg aria-hidden=\"true\" height=\"16\" version=\"1.1\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"></path></svg></a>Examples</h2>\n<h3 id=\"basic-image\"><a href=\"#basic-image\" aria-hidden=\"true\" class=\"anchor\"><svg aria-hidden=\"true\" height=\"16\" version=\"1.1\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"></path></svg></a>Basic image</h3>\n<div class=\"gatsby-highlight\">\n      <pre class=\"language-xml\"><code><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>img</span> <span class=\"token attr-name\">src</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>http://example.com/my-image.jpg<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">alt</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>my image<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">width</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>100<span class=\"token punctuation\">\"</span></span> <span class=\"token punctuation\">/></span></span>\n</code></pre>\n      </div>\n<h3 id=\"inferring-the-width\"><a href=\"#inferring-the-width\" aria-hidden=\"true\" class=\"anchor\"><svg aria-hidden=\"true\" height=\"16\" version=\"1.1\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"></path></svg></a>Inferring the width</h3>\n<p>HEML lets you infer the width from the image file. If you don't want to set the width value manually, <code>infer</code> will set it for you.</p>\n<div class=\"gatsby-highlight\">\n      <pre class=\"language-xml\"><code><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>img</span> <span class=\"token attr-name\">src</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>http://example.com/my-image.jpg<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">alt</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>my image<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">infer</span> <span class=\"token punctuation\">/></span></span>\n</code></pre>\n      </div>\n<p>If you are using a retina sized image you can set <code>infer=retina</code> which will set the width to half of what the image file width actually is.</p>\n<div class=\"gatsby-highlight\">\n      <pre class=\"language-xml\"><code><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>img</span> <span class=\"token attr-name\">src</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>http://example.com/my-image.jpg<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">alt</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>my image<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">infer</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>retina<span class=\"token punctuation\">\"</span></span> <span class=\"token punctuation\">/></span></span>\n</code></pre>\n      </div>\n<h2 id=\"attributes\"><a href=\"#attributes\" aria-hidden=\"true\" class=\"anchor\"><svg aria-hidden=\"true\" height=\"16\" version=\"1.1\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"></path></svg></a>Attributes</h2>\n<p>This element supports the <a href=\"/elements/overview#global-attributes\">global attributes</a>.</p>\n<div class=\"attributes-table\">\n<table>\n<thead>\n<tr>\n<th></th>\n<th></th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>src</strong>\n<small>\nurl\n</small></td>\n<td>Sets the image source. \n<strong>This is required.</strong></td>\n</tr>\n<tr>\n<td><strong>alt</strong>\n<small>\nstring\n</small></td>\n<td>Sets the image description. Defaults to \n<code>\"\"</code>\n.</td>\n</tr>\n<tr>\n<td><strong>width</strong>\n<small>\npixels\n</small></td>\n<td>Sets the exact width of the image.</td>\n</tr>\n<tr>\n<td><strong>height</strong>\n<small>\npixels\n</small></td>\n<td>Sets the exact height of the image.</td>\n</tr>\n<tr>\n<td><strong>infer</strong>\n<small>\nstring/boolean\n</small></td>\n<td>This should be used instead of the width and height. If present, the image width will be set to the exact width of the actual image. If set to \n<code>retina</code>\n, its width will be half of the image width.</td>\n</tr>\n<tr>\n<td><strong>srcset</strong>\n<small>\nlist\n</small></td>\n<td>Directly passes through to the image. See the \n<a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-srcset\">Mozilla docs</a>\n for more.</td>\n</tr>\n</tbody>\n</table>\n</div>\n<h2 id=\"styling\"><a href=\"#styling\" aria-hidden=\"true\" class=\"anchor\"><svg aria-hidden=\"true\" height=\"16\" version=\"1.1\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"></path></svg></a>Styling</h2>\n<p>All styles given directly apply to the HTML <code>&#x3C;img></code> tag.</p>",
+            "headings": [
+                {
+                    "value": "Examples",
+                    "depth": 2
+                },
+                {
+                    "value": "Basic image",
+                    "depth": 3
+                },
+                {
+                    "value": "Inferring the width",
+                    "depth": 3
+                },
+                {
+                    "value": "Attributes",
+                    "depth": 2
+                },
+                {
+                    "value": "Styling",
+                    "depth": 2
+                }
+            ],
+            "frontmatter": {
+                "title": "Image",
+                "description": "The <img> element adds an image in your email."
+            }
+        },
+        "nav": [
+            {
+                "title": "Getting Started",
+                "children": [
+                    {
+                        "title": "Overview",
+                        "path": "/docs/getting-started/overview"
+                    },
+                    {
+                        "title": "Usage",
+                        "path": "/docs/getting-started/usage"
+                    },
+                    {
+                        "title": "HEML Guide",
+                        "path": "/docs/getting-started/guide"
+                    }
+                ],
+                "redirectFrom": "/docs/getting-started",
+                "path": "/docs/getting-started/overview"
+            },
+            {
+                "title": "Email structure",
+                "children": [
+                    {
+                        "title": "Overview",
+                        "path": "/docs/email-structure/overview"
+                    },
+                    {
+                        "title": "Heml",
+                        "path": "/docs/email-structure/heml"
+                    },
+                    {
+                        "title": "Head",
+                        "path": "/docs/email-structure/head"
+                    },
+                    {
+                        "title": "Body",
+                        "path": "/docs/email-structure/body"
+                    },
+                    {
+                        "title": "",
+                        "path": "/docs/email-structure/raw"
+                    }
+                ],
+                "redirectFrom": "/docs/email-structure",
+                "path": "/docs/email-structure/overview"
+            },
+            {
+                "title": "Styling",
+                "children": [
+                    {
+                        "title": "Using CSS",
+                        "path": "/docs/styling/using-css"
+                    },
+                    {
+                        "title": "",
+                        "path": "/docs/styling/targeting-clients"
+                    },
+                    {
+                        "title": "Pseudo-Elements",
+                        "path": "/docs/styling/pseudo-elements"
+                    }
+                ],
+                "redirectFrom": "/docs/styling",
+                "path": "/docs/styling/using-css"
+            },
+            {
+                "title": "Elements",
+                "children": [
+                    {
+                        "title": "Overview",
+                        "path": "/docs/elements/overview"
+                    },
+                    {
+                        "title": "Layout",
+                        "path": "/docs/elements/layout"
+                    },
+                    {
+                        "title": "Meta Elements",
+                        "path": "/docs/elements/meta"
+                    },
+                    {
+                        "title": "Style",
+                        "path": "/docs/elements/style"
+                    },
+                    {
+                        "title": "Typography",
+                        "path": "/docs/elements/typography"
+                    },
+                    {
+                        "title": "Block",
+                        "path": "/docs/elements/block"
+                    },
+                    {
+                        "title": "Image",
+                        "path": "/docs/elements/image"
+                    },
+                    {
+                        "title": "Button",
+                        "path": "/docs/elements/button"
+                    },
+                    {
+                        "title": "Link",
+                        "path": "/docs/elements/link"
+                    }
+                ],
+                "redirectFrom": "/docs/elements",
+                "path": "/docs/elements/overview"
+            }
+        ]
+    }
+}

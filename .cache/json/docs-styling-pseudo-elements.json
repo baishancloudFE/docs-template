@@ -1,0 +1,128 @@
+{
+    "pathContext": {
+        "page": {
+            "fileAbsolutePath": "/Users/smoclock/work/docs-template/src/docs/002-styling/003-pseudo-elements.md",
+            "html": "<p><strong>Disclaimer: When styling HEML pseudo-elements it is up to you to verify that the styles hold up across email clients. You are entering uncharted territory.</strong></p>\n<p>In some cases you may want to style a HEML element in a way that just isn't possible. This stems from the fact that each HEML element has a one-to-many relationship with HTML tags. Because of this the different properties have to belong to different tags. To allow for you to apply more advanced styling, HEML elements  have pseudo-elements to let you style the rendered HTML with more control.</p>\n<p>These psuedo elements work like the <code>::before</code> and <code>::after</code> pseudo-elements. They allow us to style elements that we didn't explicitly create. We can use CSS to style these in any way we want. </p>\n<h3 id=\"example\"><a href=\"#example\" aria-hidden=\"true\" class=\"anchor\"><svg aria-hidden=\"true\" height=\"16\" version=\"1.1\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"></path></svg></a>Example</h3>\n<p>This CSS will style the text in the button so that it has a blue background. </p>\n<div class=\"gatsby-highlight\">\n      <pre class=\"language-css\"><code><span class=\"token selector\">button::text</span> <span class=\"token punctuation\">{</span>\n  <span class=\"token property\">background</span><span class=\"token punctuation\">:</span> blue<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n</code></pre>\n      </div>\n<p>This allows you to use the full power of CSS on the rendered element. You could make the text background change when you hover over the button, or change only when you hover over the text.</p>\n<div class=\"gatsby-highlight\">\n      <pre class=\"language-css\"><code><span class=\"token comment\" spellcheck=\"true\">/* hover over the button to change the text background */</span>\n<span class=\"token selector\">button:hover::text</span> <span class=\"token punctuation\">{</span>\n  <span class=\"token property\">background</span><span class=\"token punctuation\">:</span> orange<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n\n<span class=\"token comment\" spellcheck=\"true\">/* hover over the text only to change the text background */</span>\n<span class=\"token selector\">button::text:hover</span> <span class=\"token punctuation\">{</span>\n  <span class=\"token property\">background</span><span class=\"token punctuation\">:</span> orange<span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n</code></pre>\n      </div>",
+            "headings": [
+                {
+                    "value": "Example",
+                    "depth": 3
+                }
+            ],
+            "frontmatter": {
+                "title": "Pseudo-Elements",
+                "description": null
+            }
+        },
+        "nav": [
+            {
+                "title": "Getting Started",
+                "children": [
+                    {
+                        "title": "Overview",
+                        "path": "/docs/getting-started/overview"
+                    },
+                    {
+                        "title": "Usage",
+                        "path": "/docs/getting-started/usage"
+                    },
+                    {
+                        "title": "HEML Guide",
+                        "path": "/docs/getting-started/guide"
+                    }
+                ],
+                "redirectFrom": "/docs/getting-started",
+                "path": "/docs/getting-started/overview"
+            },
+            {
+                "title": "Email structure",
+                "children": [
+                    {
+                        "title": "Overview",
+                        "path": "/docs/email-structure/overview"
+                    },
+                    {
+                        "title": "Heml",
+                        "path": "/docs/email-structure/heml"
+                    },
+                    {
+                        "title": "Head",
+                        "path": "/docs/email-structure/head"
+                    },
+                    {
+                        "title": "Body",
+                        "path": "/docs/email-structure/body"
+                    },
+                    {
+                        "title": "",
+                        "path": "/docs/email-structure/raw"
+                    }
+                ],
+                "redirectFrom": "/docs/email-structure",
+                "path": "/docs/email-structure/overview"
+            },
+            {
+                "title": "Styling",
+                "children": [
+                    {
+                        "title": "Using CSS",
+                        "path": "/docs/styling/using-css"
+                    },
+                    {
+                        "title": "",
+                        "path": "/docs/styling/targeting-clients"
+                    },
+                    {
+                        "title": "Pseudo-Elements",
+                        "path": "/docs/styling/pseudo-elements"
+                    }
+                ],
+                "redirectFrom": "/docs/styling",
+                "path": "/docs/styling/using-css"
+            },
+            {
+                "title": "Elements",
+                "children": [
+                    {
+                        "title": "Overview",
+                        "path": "/docs/elements/overview"
+                    },
+                    {
+                        "title": "Layout",
+                        "path": "/docs/elements/layout"
+                    },
+                    {
+                        "title": "Meta Elements",
+                        "path": "/docs/elements/meta"
+                    },
+                    {
+                        "title": "Style",
+                        "path": "/docs/elements/style"
+                    },
+                    {
+                        "title": "Typography",
+                        "path": "/docs/elements/typography"
+                    },
+                    {
+                        "title": "Block",
+                        "path": "/docs/elements/block"
+                    },
+                    {
+                        "title": "Image",
+                        "path": "/docs/elements/image"
+                    },
+                    {
+                        "title": "Button",
+                        "path": "/docs/elements/button"
+                    },
+                    {
+                        "title": "Link",
+                        "path": "/docs/elements/link"
+                    }
+                ],
+                "redirectFrom": "/docs/elements",
+                "path": "/docs/elements/overview"
+            }
+        ]
+    }
+}

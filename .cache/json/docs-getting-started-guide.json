@@ -1,0 +1,144 @@
+{
+    "pathContext": {
+        "page": {
+            "fileAbsolutePath": "/Users/smoclock/work/docs-template/src/docs/000-getting-started/003-guide.md",
+            "html": "<h2 id=\"getting-started\"><a href=\"#getting-started\" aria-hidden=\"true\" class=\"anchor\"><svg aria-hidden=\"true\" height=\"16\" version=\"1.1\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"></path></svg></a>Getting started</h2>\n<p>Lets build out a simple welcome email with HEML!</p>\n<p>The first thing we'll want to do for our email is add our <code>&#x3C;heml></code>, <code>&#x3C;head></code>, and <code>&#x3C;body></code> elements. We'll add our style and meta elements in the head, and our content in the body.</p>\n<div class=\"gatsby-highlight\">\n      <pre class=\"language-xml\"><code><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>heml</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>head</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>head</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>body</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>body</span><span class=\"token punctuation\">></span></span>\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>heml</span><span class=\"token punctuation\">></span></span>\n</code></pre>\n      </div>\n<h2 id=\"our-metadata\"><a href=\"#our-metadata\" aria-hidden=\"true\" class=\"anchor\"><svg aria-hidden=\"true\" height=\"16\" version=\"1.1\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"></path></svg></a>Our metadata</h2>\n<p>We'll add a couple of meta elements to start: <code>&#x3C;subject></code> and <code>&#x3C;preview></code>. Our subject will appear in the title if the email is viewed in a browser. The preview will show up in certain clients, like Gmail or Apple Mail, which show a snippet of what's inside an email before you open it.</p>\n<div class=\"gatsby-highlight\">\n      <pre class=\"language-xml\"><code><span class=\"token comment\" spellcheck=\"true\">&lt;!-- inside the head --></span>\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>subject</span><span class=\"token punctuation\">></span></span>Email is awesome<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>subject</span><span class=\"token punctuation\">></span></span>\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>preview</span><span class=\"token punctuation\">></span></span>Learn about all the cool things you can do with email today!<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>preview</span><span class=\"token punctuation\">></span></span>\n</code></pre>\n      </div>\n<h2 id=\"the-layout\"><a href=\"#the-layout\" aria-hidden=\"true\" class=\"anchor\"><svg aria-hidden=\"true\" height=\"16\" version=\"1.1\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"></path></svg></a>The layout</h2>\n<p>Inside the body, add a basic one column <a href=\"http://heml.io/docs/elements/layout\">layout</a>. This will be 600 pixels wide, or 100% percent of the client, whichever comes first.</p>\n<div class=\"gatsby-highlight\">\n      <pre class=\"language-xml\"><code><span class=\"token comment\" spellcheck=\"true\">&lt;!-- inside the body --></span>\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>container</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>row</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>column</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>column</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>row</span><span class=\"token punctuation\">></span></span>\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>container</span><span class=\"token punctuation\">></span></span>\n</code></pre>\n      </div>\n<h2 id=\"writing-our-story-️\"><a href=\"#writing-our-story-%EF%B8%8F\" aria-hidden=\"true\" class=\"anchor\"><svg aria-hidden=\"true\" height=\"16\" version=\"1.1\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"></path></svg></a>Writing our story ✍️</h2>\n<p>Inside of our column, lets create a header and paragraph welcoming the user.</p>\n<div class=\"gatsby-highlight\">\n      <pre class=\"language-xml\"><code><span class=\"token comment\" spellcheck=\"true\">&lt;!-- inside the column --></span>\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>h1</span><span class=\"token punctuation\">></span></span>Hey there! 👋<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>h1</span><span class=\"token punctuation\">></span></span>\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>p</span><span class=\"token punctuation\">></span></span>Thanks for giving HEML a try! Let us know if you run into any issues or build something awesome with it!<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>p</span><span class=\"token punctuation\">></span></span>\n</code></pre>\n      </div>\n<p>Next, lets add another row, this time with three columns. Inside them, we'll explain some fun ways to use email.</p>\n<div class=\"gatsby-highlight\">\n      <pre class=\"language-xml\"><code><span class=\"token comment\" spellcheck=\"true\">&lt;!-- after the first row, inside the container --></span>\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>row</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>column</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>h3</span><span class=\"token punctuation\">></span></span>Make games<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>h3</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>p</span><span class=\"token punctuation\">></span></span>The dynamic duo, Camiah, have made some awesome games in emails!<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>p</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>button</span> <span class=\"token attr-name\">href</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>https://codepen.io/reallygoodemails/pen/WGzdXk<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>Sweep bombs 💣<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>button</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>column</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>column</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>h3</span><span class=\"token punctuation\">></span></span>Show a slideshow<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>h3</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>p</span><span class=\"token punctuation\">></span></span>Lego sent out an email showing off some of their new sets.<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>p</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>button</span> <span class=\"token attr-name\">href</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>https://codepen.io/reallygoodemails/pen/EXdgjY<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>Check it out 🕵<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>button</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>column</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>column</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>h3</span><span class=\"token punctuation\">></span></span>Win back customers<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>h3</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>p</span><span class=\"token punctuation\">></span></span>Really Good Emails has collected a series of emails to win you back.<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>p</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>button</span> <span class=\"token attr-name\">href</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>https://reallygoodemails.com/category/promotional/winback/<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>Open your heart ❤️<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>button</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>column</span><span class=\"token punctuation\">></span></span>\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>row</span><span class=\"token punctuation\">></span></span>\n</code></pre>\n      </div>\n<p>Let's also drop in a horizontal rule between our two rows to give them some space.</p>\n<div class=\"gatsby-highlight\">\n      <pre class=\"language-xml\"><code>...\n<span class=\"token comment\" spellcheck=\"true\">&lt;!-- in between the two rows --></span>\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>hr</span><span class=\"token punctuation\">></span></span>\n</code></pre>\n      </div>\n<p>You should have something that looks like this.</p>\n<p><img src=\"/media/guide-1.png\" alt=\"email without styling\"></p>\n<h2 id=\"painting-the-canvas-\"><a href=\"#painting-the-canvas-\" aria-hidden=\"true\" class=\"anchor\"><svg aria-hidden=\"true\" height=\"16\" version=\"1.1\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"></path></svg></a>Painting the canvas 🎨</h2>\n<p>Now that we have our email built out, lets make it look good. We'll add some styles so we have a white container and some black buttons.</p>\n<p>To do this, we'll add a <code>&#x3C;style></code> tag to our <code>&#x3C;head></code> with some CSS.</p>\n<div class=\"gatsby-highlight\">\n      <pre class=\"language-html\"><code><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>style</span><span class=\"token punctuation\">></span></span><span class=\"token style language-css\">\n  <span class=\"token selector\">body</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token property\">background</span><span class=\"token punctuation\">:</span> #EEE<span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span>\n\n  <span class=\"token selector\">container</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token property\">background</span><span class=\"token punctuation\">:</span> white<span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span>\n\n  <span class=\"token selector\">hr</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token property\">border-color</span><span class=\"token punctuation\">:</span> #DDD<span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span>\n\n  <span class=\"token selector\">button</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token property\">background</span><span class=\"token punctuation\">:</span> #333<span class=\"token punctuation\">;</span>\n    <span class=\"token property\">padding</span><span class=\"token punctuation\">:</span> 10px 20px<span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span>\n</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>style</span><span class=\"token punctuation\">></span></span>\n</code></pre>\n      </div>\n<p>This all feels a little tight though, so lets add some spacing and make it a bit bigger.</p>\n<div class=\"gatsby-highlight\">\n      <pre class=\"language-html\"><code><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>style</span><span class=\"token punctuation\">></span></span><span class=\"token style language-css\">\n  <span class=\"token selector\">container</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token property\">max-width</span><span class=\"token punctuation\">:</span> 700px<span class=\"token punctuation\">;</span>\n    <span class=\"token property\">margin</span><span class=\"token punctuation\">:</span> 10px auto<span class=\"token punctuation\">;</span>\n    <span class=\"token property\">padding</span><span class=\"token punctuation\">:</span> 10px 20px<span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span>\n\n  <span class=\"token selector\">button</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token property\">margin</span><span class=\"token punctuation\">:</span> 10px 0<span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span>\n\n  <span class=\"token selector\">column</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token property\">padding</span><span class=\"token punctuation\">:</span> 0 10px<span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span>\n</span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>style</span><span class=\"token punctuation\">></span></span>\n</code></pre>\n      </div>\n<p>And there we go! Our awesome email, ready for the world!</p>\n<p><img src=\"/media/guide-2.png\" alt=\"finished email\"></p>",
+            "headings": [
+                {
+                    "value": "Getting started",
+                    "depth": 2
+                },
+                {
+                    "value": "Our metadata",
+                    "depth": 2
+                },
+                {
+                    "value": "The layout",
+                    "depth": 2
+                },
+                {
+                    "value": "Writing our story ✍️",
+                    "depth": 2
+                },
+                {
+                    "value": "Painting the canvas 🎨",
+                    "depth": 2
+                }
+            ],
+            "frontmatter": {
+                "title": "HEML Guide",
+                "description": null
+            }
+        },
+        "nav": [
+            {
+                "title": "Getting Started",
+                "children": [
+                    {
+                        "title": "Overview",
+                        "path": "/docs/getting-started/overview"
+                    },
+                    {
+                        "title": "Usage",
+                        "path": "/docs/getting-started/usage"
+                    },
+                    {
+                        "title": "HEML Guide",
+                        "path": "/docs/getting-started/guide"
+                    }
+                ],
+                "redirectFrom": "/docs/getting-started",
+                "path": "/docs/getting-started/overview"
+            },
+            {
+                "title": "Email structure",
+                "children": [
+                    {
+                        "title": "Overview",
+                        "path": "/docs/email-structure/overview"
+                    },
+                    {
+                        "title": "Heml",
+                        "path": "/docs/email-structure/heml"
+                    },
+                    {
+                        "title": "Head",
+                        "path": "/docs/email-structure/head"
+                    },
+                    {
+                        "title": "Body",
+                        "path": "/docs/email-structure/body"
+                    },
+                    {
+                        "title": "",
+                        "path": "/docs/email-structure/raw"
+                    }
+                ],
+                "redirectFrom": "/docs/email-structure",
+                "path": "/docs/email-structure/overview"
+            },
+            {
+                "title": "Styling",
+                "children": [
+                    {
+                        "title": "Using CSS",
+                        "path": "/docs/styling/using-css"
+                    },
+                    {
+                        "title": "",
+                        "path": "/docs/styling/targeting-clients"
+                    },
+                    {
+                        "title": "Pseudo-Elements",
+                        "path": "/docs/styling/pseudo-elements"
+                    }
+                ],
+                "redirectFrom": "/docs/styling",
+                "path": "/docs/styling/using-css"
+            },
+            {
+                "title": "Elements",
+                "children": [
+                    {
+                        "title": "Overview",
+                        "path": "/docs/elements/overview"
+                    },
+                    {
+                        "title": "Layout",
+                        "path": "/docs/elements/layout"
+                    },
+                    {
+                        "title": "Meta Elements",
+                        "path": "/docs/elements/meta"
+                    },
+                    {
+                        "title": "Style",
+                        "path": "/docs/elements/style"
+                    },
+                    {
+                        "title": "Typography",
+                        "path": "/docs/elements/typography"
+                    },
+                    {
+                        "title": "Block",
+                        "path": "/docs/elements/block"
+                    },
+                    {
+                        "title": "Image",
+                        "path": "/docs/elements/image"
+                    },
+                    {
+                        "title": "Button",
+                        "path": "/docs/elements/button"
+                    },
+                    {
+                        "title": "Link",
+                        "path": "/docs/elements/link"
+                    }
+                ],
+                "redirectFrom": "/docs/elements",
+                "path": "/docs/elements/overview"
+            }
+        ]
+    }
+}

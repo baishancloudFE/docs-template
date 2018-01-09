@@ -1,0 +1,168 @@
+{
+    "pathContext": {
+        "page": {
+            "fileAbsolutePath": "/Users/smoclock/work/docs-template/src/docs/004-elements/002-layout.md",
+            "html": "<p>Layouts are key when designing emails. HEML provides a layout system driven by three elements: <code>&#x3C;container></code>, <code>&#x3C;row></code>, and <code>&#x3C;column></code>.</p>\n<h2 id=\"containers\"><a href=\"#containers\" aria-hidden=\"true\" class=\"anchor\"><svg aria-hidden=\"true\" height=\"16\" version=\"1.1\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"></path></svg></a>Containers</h2>\n<p>All layouts should live inside this element. By default, all containers have a width of 100%, and a max width of 600px.</p>\n<h3 id=\"basic-container\"><a href=\"#basic-container\" aria-hidden=\"true\" class=\"anchor\"><svg aria-hidden=\"true\" height=\"16\" version=\"1.1\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"></path></svg></a>Basic container</h3>\n<div class=\"gatsby-highlight\">\n      <pre class=\"language-xml\"><code><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>container</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token comment\" spellcheck=\"true\">&lt;!-- put your layout in here --></span>\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>container</span><span class=\"token punctuation\">></span></span>\n</code></pre>\n      </div>\n<h3 id=\"changing-the-maximum-width\"><a href=\"#changing-the-maximum-width\" aria-hidden=\"true\" class=\"anchor\"><svg aria-hidden=\"true\" height=\"16\" version=\"1.1\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"></path></svg></a>Changing the maximum width</h3>\n<p>If you want to change the maximum width of your container, you can do with a small CSS snippet.</p>\n<div class=\"gatsby-highlight\">\n      <pre class=\"language-xml\"><code><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>heml</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>head</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>style</span><span class=\"token punctuation\">></span></span><span class=\"token style language-css\">\n      <span class=\"token selector\">container</span> <span class=\"token punctuation\">{</span>\n        <span class=\"token property\">max-width</span><span class=\"token punctuation\">:</span> 800px<span class=\"token punctuation\">;</span>\n      <span class=\"token punctuation\">}</span>\n    </span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>style</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>head</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>body</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>container</span><span class=\"token punctuation\">></span></span>\n      <span class=\"token comment\" spellcheck=\"true\">&lt;!-- now all containers will grow up to 800px --></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>container</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>body</span><span class=\"token punctuation\">></span></span>\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>heml</span><span class=\"token punctuation\">></span></span>\n</code></pre>\n      </div>\n<h3 id=\"styling\"><a href=\"#styling\" aria-hidden=\"true\" class=\"anchor\"><svg aria-hidden=\"true\" height=\"16\" version=\"1.1\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"></path></svg></a>Styling</h3>\n<p>The container element supports the standard <a href=\"/docs/styling/using-css#block-elements\">block and text element styles</a>.</p>\n<h2 id=\"rows\"><a href=\"#rows\" aria-hidden=\"true\" class=\"anchor\"><svg aria-hidden=\"true\" height=\"16\" version=\"1.1\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"></path></svg></a>Rows</h2>\n<p>Rows wrap all columns in your layout. They separate your columns into sections.</p>\n<div class=\"gatsby-highlight\">\n      <pre class=\"language-xml\"><code><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>container</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>row</span><span class=\"token punctuation\">></span></span> <span class=\"token comment\" spellcheck=\"true\">&lt;!-- columns here --></span> <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>row</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>row</span><span class=\"token punctuation\">></span></span> <span class=\"token comment\" spellcheck=\"true\">&lt;!-- more columns here --></span> <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>row</span><span class=\"token punctuation\">></span></span>\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>container</span><span class=\"token punctuation\">></span></span>\n</code></pre>\n      </div>\n<h2 id=\"columns\"><a href=\"#columns\" aria-hidden=\"true\" class=\"anchor\"><svg aria-hidden=\"true\" height=\"16\" version=\"1.1\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"></path></svg></a>Columns</h2>\n<p>Columns are exactly what they sound like. They break up content into different sections in a row. The grid system is based on a 12 column system similar to <a href=\"https://getbootstrap.com/\">Bootstrap</a>. We suggest having no more then 4 columns per row to keep your design as flexible as possible. However, there may be cases where you want to divide it up more.</p>\n<p>By default, columns will be distributed among the available space on desktop and will grow to fill the entire row on mobile.</p>\n<h3 id=\"auto-sizing-columns\"><a href=\"#auto-sizing-columns\" aria-hidden=\"true\" class=\"anchor\"><svg aria-hidden=\"true\" height=\"16\" version=\"1.1\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"></path></svg></a>Auto sizing columns</h3>\n<div class=\"gatsby-highlight\">\n      <pre class=\"language-xml\"><code><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>container</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>row</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>column</span><span class=\"token punctuation\">></span></span>\n      column 1\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>column</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>column</span><span class=\"token punctuation\">></span></span>\n      column 2\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>column</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>row</span><span class=\"token punctuation\">></span></span>\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>container</span><span class=\"token punctuation\">></span></span>\n</code></pre>\n      </div>\n<h3 id=\"defined-sizes\"><a href=\"#defined-sizes\" aria-hidden=\"true\" class=\"anchor\"><svg aria-hidden=\"true\" height=\"16\" version=\"1.1\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"></path></svg></a>Defined sizes</h3>\n<p>You can use the <code>large</code> and <code>small</code> attributes to set the size on your columns on mobile and desktop.</p>\n<div class=\"gatsby-highlight\">\n      <pre class=\"language-xml\"><code><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>container</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>row</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>column</span> <span class=\"token attr-name\">large</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>8<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">small</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>8<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>I always take up 8 columns<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>column</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>column</span> <span class=\"token attr-name\">large</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>4<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">small</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>4<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>I always take up 4 columns<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>column</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>row</span><span class=\"token punctuation\">></span></span>\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>container</span><span class=\"token punctuation\">></span></span>\n</code></pre>\n      </div>\n<h3 id=\"mix-and-match\"><a href=\"#mix-and-match\" aria-hidden=\"true\" class=\"anchor\"><svg aria-hidden=\"true\" height=\"16\" version=\"1.1\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"></path></svg></a>Mix and match</h3>\n<p>You can use a combination of defining exact column-sizing and auto-sizing to simplify your templates.</p>\n<div class=\"gatsby-highlight\">\n      <pre class=\"language-xml\"><code><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>container</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>row</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>column</span> <span class=\"token attr-name\">large</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>8<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">small</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>6<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>I have defined sizes<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>column</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>column</span><span class=\"token punctuation\">></span></span>I take up the remaining space<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>column</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>row</span><span class=\"token punctuation\">></span></span>\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>container</span><span class=\"token punctuation\">></span></span>\n</code></pre>\n      </div>\n<h2 id=\"attributes\"><a href=\"#attributes\" aria-hidden=\"true\" class=\"anchor\"><svg aria-hidden=\"true\" height=\"16\" version=\"1.1\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"></path></svg></a>Attributes</h2>\n<div class=\"attributes-table\">\n<table>\n<thead>\n<tr>\n<th></th>\n<th></th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>small</strong>\n<small>\nnumber\n</small></td>\n<td>Sets the column width on small screens</td>\n</tr>\n<tr>\n<td><strong>large</strong>\n<small>\nnumber\n</small></td>\n<td>Sets the column width on large screens</td>\n</tr>\n</tbody>\n</table>\n</div>\n<h3 id=\"styling-1\"><a href=\"#styling-1\" aria-hidden=\"true\" class=\"anchor\"><svg aria-hidden=\"true\" height=\"16\" version=\"1.1\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"></path></svg></a>Styling</h3>\n<div class=\"fixed-table bordered-table\">\n<table>\n<thead>\n<tr>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>padding</td>\n<td>display</td>\n<td>background</td>\n<td>border</td>\n</tr>\n<tr>\n<td>box-shadow</td>\n<td>text</td>\n<td>font</td>\n<td>color</td>\n</tr>\n</tbody>\n</table>\n</div>",
+            "headings": [
+                {
+                    "value": "Containers",
+                    "depth": 2
+                },
+                {
+                    "value": "Basic container",
+                    "depth": 3
+                },
+                {
+                    "value": "Changing the maximum width",
+                    "depth": 3
+                },
+                {
+                    "value": "Styling",
+                    "depth": 3
+                },
+                {
+                    "value": "Rows",
+                    "depth": 2
+                },
+                {
+                    "value": "Columns",
+                    "depth": 2
+                },
+                {
+                    "value": "Auto sizing columns",
+                    "depth": 3
+                },
+                {
+                    "value": "Defined sizes",
+                    "depth": 3
+                },
+                {
+                    "value": "Mix and match",
+                    "depth": 3
+                },
+                {
+                    "value": "Attributes",
+                    "depth": 2
+                },
+                {
+                    "value": "Styling",
+                    "depth": 3
+                }
+            ],
+            "frontmatter": {
+                "title": "Layout",
+                "description": null
+            }
+        },
+        "nav": [
+            {
+                "title": "Getting Started",
+                "children": [
+                    {
+                        "title": "Overview",
+                        "path": "/docs/getting-started/overview"
+                    },
+                    {
+                        "title": "Usage",
+                        "path": "/docs/getting-started/usage"
+                    },
+                    {
+                        "title": "HEML Guide",
+                        "path": "/docs/getting-started/guide"
+                    }
+                ],
+                "redirectFrom": "/docs/getting-started",
+                "path": "/docs/getting-started/overview"
+            },
+            {
+                "title": "Email structure",
+                "children": [
+                    {
+                        "title": "Overview",
+                        "path": "/docs/email-structure/overview"
+                    },
+                    {
+                        "title": "Heml",
+                        "path": "/docs/email-structure/heml"
+                    },
+                    {
+                        "title": "Head",
+                        "path": "/docs/email-structure/head"
+                    },
+                    {
+                        "title": "Body",
+                        "path": "/docs/email-structure/body"
+                    },
+                    {
+                        "title": "",
+                        "path": "/docs/email-structure/raw"
+                    }
+                ],
+                "redirectFrom": "/docs/email-structure",
+                "path": "/docs/email-structure/overview"
+            },
+            {
+                "title": "Styling",
+                "children": [
+                    {
+                        "title": "Using CSS",
+                        "path": "/docs/styling/using-css"
+                    },
+                    {
+                        "title": "",
+                        "path": "/docs/styling/targeting-clients"
+                    },
+                    {
+                        "title": "Pseudo-Elements",
+                        "path": "/docs/styling/pseudo-elements"
+                    }
+                ],
+                "redirectFrom": "/docs/styling",
+                "path": "/docs/styling/using-css"
+            },
+            {
+                "title": "Elements",
+                "children": [
+                    {
+                        "title": "Overview",
+                        "path": "/docs/elements/overview"
+                    },
+                    {
+                        "title": "Layout",
+                        "path": "/docs/elements/layout"
+                    },
+                    {
+                        "title": "Meta Elements",
+                        "path": "/docs/elements/meta"
+                    },
+                    {
+                        "title": "Style",
+                        "path": "/docs/elements/style"
+                    },
+                    {
+                        "title": "Typography",
+                        "path": "/docs/elements/typography"
+                    },
+                    {
+                        "title": "Block",
+                        "path": "/docs/elements/block"
+                    },
+                    {
+                        "title": "Image",
+                        "path": "/docs/elements/image"
+                    },
+                    {
+                        "title": "Button",
+                        "path": "/docs/elements/button"
+                    },
+                    {
+                        "title": "Link",
+                        "path": "/docs/elements/link"
+                    }
+                ],
+                "redirectFrom": "/docs/elements",
+                "path": "/docs/elements/overview"
+            }
+        ]
+    }
+}

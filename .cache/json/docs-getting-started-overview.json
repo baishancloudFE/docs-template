@@ -1,0 +1,140 @@
+{
+    "pathContext": {
+        "page": {
+            "fileAbsolutePath": "/Users/smoclock/work/docs-template/src/docs/000-getting-started/001-overview.md",
+            "html": "<p>Email is hard. With dozens of popular email clients, each of which has its own quirks, it can be overwhelming to build an email that looks good and works well. Add in the challenge of getting your email to the inbox quickly, and it's enough to make anyone give up.</p>\n<p>SparkPost has been working on getting emails to the inbox for close to two decades. HEML is our attempt to help solve the other half of the email problem: writing clean, well designed emails.</p>\n<p>HEML is a XML-based markup language designed for building emails. The goal is to make building emails feel as natural as building websites.</p>\n<h2 id=\"philosophy\"><a href=\"#philosophy\" aria-hidden=\"true\" class=\"anchor\"><svg aria-hidden=\"true\" height=\"16\" version=\"1.1\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"></path></svg></a>Philosophy</h2>\n<p>HEML is built on 3 core principles. Each decision about the architecture and element design is made with these in mind.</p>\n<div class=\"fixed-table\">\n<table>\n<thead>\n<tr>\n<th><h3>\nNative Feel\n</h3></th>\n<th><h3>\nForward Thinking\n</h3></th>\n<th><h3>\nExtendable\n</h3></th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Do you know HTML and CSS? Check out our docs and you're off to the races! No special rules or styling paradigms to master.</td>\n<td>HEML is designed to take advantage of all that email can do while still providing a solid experience for all clients.</td>\n<td>You can create your own powerful elements and style rules. Share them with the world, or keep 'em to yourself. Your choice.</td>\n</tr>\n</tbody>\n</table>\n</div>\n<h2 id=\"how-does-it-work\"><a href=\"#how-does-it-work\" aria-hidden=\"true\" class=\"anchor\"><svg aria-hidden=\"true\" height=\"16\" version=\"1.1\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"></path></svg></a>How does it work?</h2>\n<p>There is a lot of magic going on under the hood. We'd love for you to poke around and maybe even submit a PR! 🎉 On a high level, here's how it works.</p>\n<h3 id=\"the-heml\"><a href=\"#the-heml\" aria-hidden=\"true\" class=\"anchor\"><svg aria-hidden=\"true\" height=\"16\" version=\"1.1\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"></path></svg></a>The HEML</h3>\n<p>Each HEML element is equivalent to some predefined HTML. The rendering engine goes through, finds all the HEML elements, and converts them to HTML.</p>\n<h3 id=\"the-css\"><a href=\"#the-css\" aria-hidden=\"true\" class=\"anchor\"><svg aria-hidden=\"true\" height=\"16\" version=\"1.1\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"></path></svg></a>The CSS</h3>\n<p>The CSS contained in style tags is parsed and transformed to fix as many simple issues as possible. A good example of this is using fully expanded, uppercase hexadecimal colors (<code>#33AABB</code>) instead of the shorthand, lowercase values (<code>#3ab</code>).\n<br><strong>See:</strong> <a href=\"https://github.com/SparkPost/heml/tree/master/packages/heml-styles\">hemlstyles</a></p>\n<p>Any CSS that targets a HEML element is then transformed into new selectors, to properly style the rendered HTML. Finally, any pseudo-element selectors are replaced with the proper CSS selectors, making the CSS work as expected.\n<br><strong>See:</strong> <a href=\"https://github.com/SparkPost/heml/tree/master/packages/heml-styles/src/plugins/postcss-element-expander\">postcss-element-expander</a></p>",
+            "headings": [
+                {
+                    "value": "Philosophy",
+                    "depth": 2
+                },
+                {
+                    "value": "How does it work?",
+                    "depth": 2
+                },
+                {
+                    "value": "The HEML",
+                    "depth": 3
+                },
+                {
+                    "value": "The CSS",
+                    "depth": 3
+                }
+            ],
+            "frontmatter": {
+                "title": "Overview",
+                "description": null
+            }
+        },
+        "nav": [
+            {
+                "title": "Getting Started",
+                "children": [
+                    {
+                        "title": "Overview",
+                        "path": "/docs/getting-started/overview"
+                    },
+                    {
+                        "title": "Usage",
+                        "path": "/docs/getting-started/usage"
+                    },
+                    {
+                        "title": "HEML Guide",
+                        "path": "/docs/getting-started/guide"
+                    }
+                ],
+                "redirectFrom": "/docs/getting-started",
+                "path": "/docs/getting-started/overview"
+            },
+            {
+                "title": "Email structure",
+                "children": [
+                    {
+                        "title": "Overview",
+                        "path": "/docs/email-structure/overview"
+                    },
+                    {
+                        "title": "Heml",
+                        "path": "/docs/email-structure/heml"
+                    },
+                    {
+                        "title": "Head",
+                        "path": "/docs/email-structure/head"
+                    },
+                    {
+                        "title": "Body",
+                        "path": "/docs/email-structure/body"
+                    },
+                    {
+                        "title": "",
+                        "path": "/docs/email-structure/raw"
+                    }
+                ],
+                "redirectFrom": "/docs/email-structure",
+                "path": "/docs/email-structure/overview"
+            },
+            {
+                "title": "Styling",
+                "children": [
+                    {
+                        "title": "Using CSS",
+                        "path": "/docs/styling/using-css"
+                    },
+                    {
+                        "title": "",
+                        "path": "/docs/styling/targeting-clients"
+                    },
+                    {
+                        "title": "Pseudo-Elements",
+                        "path": "/docs/styling/pseudo-elements"
+                    }
+                ],
+                "redirectFrom": "/docs/styling",
+                "path": "/docs/styling/using-css"
+            },
+            {
+                "title": "Elements",
+                "children": [
+                    {
+                        "title": "Overview",
+                        "path": "/docs/elements/overview"
+                    },
+                    {
+                        "title": "Layout",
+                        "path": "/docs/elements/layout"
+                    },
+                    {
+                        "title": "Meta Elements",
+                        "path": "/docs/elements/meta"
+                    },
+                    {
+                        "title": "Style",
+                        "path": "/docs/elements/style"
+                    },
+                    {
+                        "title": "Typography",
+                        "path": "/docs/elements/typography"
+                    },
+                    {
+                        "title": "Block",
+                        "path": "/docs/elements/block"
+                    },
+                    {
+                        "title": "Image",
+                        "path": "/docs/elements/image"
+                    },
+                    {
+                        "title": "Button",
+                        "path": "/docs/elements/button"
+                    },
+                    {
+                        "title": "Link",
+                        "path": "/docs/elements/link"
+                    }
+                ],
+                "redirectFrom": "/docs/elements",
+                "path": "/docs/elements/overview"
+            }
+        ]
+    }
+}

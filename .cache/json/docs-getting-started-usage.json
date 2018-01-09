@@ -1,0 +1,140 @@
+{
+    "pathContext": {
+        "page": {
+            "fileAbsolutePath": "/Users/smoclock/work/docs-template/src/docs/000-getting-started/002-usage.md",
+            "html": "<h2 id=\"using-the-online-editor\"><a href=\"#using-the-online-editor\" aria-hidden=\"true\" class=\"anchor\"><svg aria-hidden=\"true\" height=\"16\" version=\"1.1\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"></path></svg></a>Using the online editor</h2>\n<p>Visit our online <a href=\"/editor\">editor</a> and code away! Just make sure to save your HEML and HTML locally before you leave.</p>\n<h2 id=\"using-the-command-line\"><a href=\"#using-the-command-line\" aria-hidden=\"true\" class=\"anchor\"><svg aria-hidden=\"true\" height=\"16\" version=\"1.1\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"></path></svg></a>Using the Command Line</h2>\n<p>Install the <code>heml</code> package globally.</p>\n<div class=\"gatsby-highlight\">\n      <pre class=\"language-sh\"><code>npm install heml -g</code></pre>\n      </div>\n<p>Create your HEML email in <code>email.heml</code>:</p>\n<div class=\"gatsby-highlight\">\n      <pre class=\"language-html\"><code><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>heml</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>head</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>subject</span><span class=\"token punctuation\">></span></span>Email Rox!<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>subject</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>style</span><span class=\"token punctuation\">></span></span><span class=\"token style language-css\">\n      <span class=\"token selector\">body</span> <span class=\"token punctuation\">{</span> <span class=\"token property\">background</span><span class=\"token punctuation\">:</span> SkyBlue<span class=\"token punctuation\">;</span> <span class=\"token punctuation\">}</span>\n      <span class=\"token selector\">h1</span> <span class=\"token punctuation\">{</span> <span class=\"token property\">color</span><span class=\"token punctuation\">:</span> DarkViolet<span class=\"token punctuation\">;</span> <span class=\"token punctuation\">}</span>\n    </span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>style</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>head</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>body</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>container</span><span class=\"token punctuation\">></span></span>\n      <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>marquee</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>h1</span><span class=\"token punctuation\">></span></span>Hello world 💌<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>h1</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>marquee</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>container</span><span class=\"token punctuation\">></span></span>\n  <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>body</span><span class=\"token punctuation\">></span></span>\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>heml</span><span class=\"token punctuation\">></span></span>\n</code></pre>\n      </div>\n<p>The CLI allows you to get started quickly. The <code>develop</code> command will watch for any changes you make and refresh the browser. It's great for iterating quickly at the beginning.</p>\n<div class=\"gatsby-highlight\">\n      <pre class=\"language-sh\"><code>heml develop email.heml --open</code></pre>\n      </div>\n<p>Once you are happy with your email run the <code>build</code> command to get code ready to be sent off the inbox.</p>\n<div class=\"gatsby-highlight\">\n      <pre class=\"language-none\"><code>heml build email.heml</code></pre>\n      </div>\n<p>Use the <code>--help</code> flag to get an overview the commands and options the CLI offers.</p>\n<div class=\"gatsby-highlight\">\n      <pre class=\"language-sh\"><code>heml --help</code></pre>\n      </div>\n<h3 id=\"inlining\"><a href=\"#inlining\" aria-hidden=\"true\" class=\"anchor\"><svg aria-hidden=\"true\" height=\"16\" version=\"1.1\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"></path></svg></a>Inlining</h3>\n<p>By default your CSS will be inlined. You can turn this off using the <code>--embed</code> flag in the CLI. To embed CSS regardless of that option see the <a href=\"/docs/elements/style\"><code>&#x3C;style></code></a> element.</p>\n<h2 id=\"using-node\"><a href=\"#using-node\" aria-hidden=\"true\" class=\"anchor\"><svg aria-hidden=\"true\" height=\"16\" version=\"1.1\" viewBox=\"0 0 16 16\" width=\"16\"><path fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"></path></svg></a>Using Node</h2>\n<p>HEML at its core is an NPM module that you can install and use in Node.js. Install it locally to get started.</p>\n<div class=\"gatsby-highlight\">\n      <pre class=\"language-sh\"><code>npm install heml</code></pre>\n      </div>\n<p>In your JavaScript file, import HEML and pass it as a string to be rendered.</p>\n<div class=\"gatsby-highlight\">\n      <pre class=\"language-js\"><code><span class=\"token keyword\">const</span> heml <span class=\"token operator\">=</span> <span class=\"token function\">require</span><span class=\"token punctuation\">(</span><span class=\"token string\">'heml'</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">const</span> options <span class=\"token operator\">=</span> <span class=\"token punctuation\">{</span>\n  validate<span class=\"token punctuation\">:</span> <span class=\"token string\">'soft'</span><span class=\"token punctuation\">,</span> <span class=\"token comment\" spellcheck=\"true\">// validation levels - 'strict'|'soft'|'none'</span>\n  cheerio<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">{</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span> <span class=\"token comment\" spellcheck=\"true\">// config passed to cheerio parser</span>\n  juice<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">{</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n  beautify<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">{</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span> <span class=\"token comment\" spellcheck=\"true\">// config passed to js-beautify html method</span>\n  elements<span class=\"token punctuation\">:</span> <span class=\"token punctuation\">[</span>\n    <span class=\"token comment\" spellcheck=\"true\">// any custom elements you want to use</span>\n  <span class=\"token punctuation\">]</span>\n<span class=\"token punctuation\">}</span><span class=\"token punctuation\">;</span>\n\n<span class=\"token function\">heml</span><span class=\"token punctuation\">(</span><span class=\"token template-string\"><span class=\"token string\">`\n  &lt;heml>\n    &lt;head>\n      &lt;subject>My Email&lt;/subject>\n    &lt;/head>\n    &lt;body>\n      &lt;container>\n        &lt;row>\n          &lt;column>&lt;p>hi there!&lt;/p>&lt;/column>\n        &lt;/row>\n      &lt;/container>\n    &lt;/body>\n  &lt;/heml>\n`</span></span><span class=\"token punctuation\">,</span> options<span class=\"token punctuation\">)</span>\n<span class=\"token punctuation\">.</span><span class=\"token function\">then</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span> html<span class=\"token punctuation\">,</span> metadata<span class=\"token punctuation\">,</span> errors <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=></span> <span class=\"token punctuation\">{</span>\n\n<span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span>\n</code></pre>\n      </div>\n<p>In the returned value, you can access the rendered HTML, the metadata exported from the head, and any validation errors that occurred.</p>",
+            "headings": [
+                {
+                    "value": "Using the online editor",
+                    "depth": 2
+                },
+                {
+                    "value": "Using the Command Line",
+                    "depth": 2
+                },
+                {
+                    "value": "Inlining",
+                    "depth": 3
+                },
+                {
+                    "value": "Using Node",
+                    "depth": 2
+                }
+            ],
+            "frontmatter": {
+                "title": "Usage",
+                "description": null
+            }
+        },
+        "nav": [
+            {
+                "title": "Getting Started",
+                "children": [
+                    {
+                        "title": "Overview",
+                        "path": "/docs/getting-started/overview"
+                    },
+                    {
+                        "title": "Usage",
+                        "path": "/docs/getting-started/usage"
+                    },
+                    {
+                        "title": "HEML Guide",
+                        "path": "/docs/getting-started/guide"
+                    }
+                ],
+                "redirectFrom": "/docs/getting-started",
+                "path": "/docs/getting-started/overview"
+            },
+            {
+                "title": "Email structure",
+                "children": [
+                    {
+                        "title": "Overview",
+                        "path": "/docs/email-structure/overview"
+                    },
+                    {
+                        "title": "Heml",
+                        "path": "/docs/email-structure/heml"
+                    },
+                    {
+                        "title": "Head",
+                        "path": "/docs/email-structure/head"
+                    },
+                    {
+                        "title": "Body",
+                        "path": "/docs/email-structure/body"
+                    },
+                    {
+                        "title": "",
+                        "path": "/docs/email-structure/raw"
+                    }
+                ],
+                "redirectFrom": "/docs/email-structure",
+                "path": "/docs/email-structure/overview"
+            },
+            {
+                "title": "Styling",
+                "children": [
+                    {
+                        "title": "Using CSS",
+                        "path": "/docs/styling/using-css"
+                    },
+                    {
+                        "title": "",
+                        "path": "/docs/styling/targeting-clients"
+                    },
+                    {
+                        "title": "Pseudo-Elements",
+                        "path": "/docs/styling/pseudo-elements"
+                    }
+                ],
+                "redirectFrom": "/docs/styling",
+                "path": "/docs/styling/using-css"
+            },
+            {
+                "title": "Elements",
+                "children": [
+                    {
+                        "title": "Overview",
+                        "path": "/docs/elements/overview"
+                    },
+                    {
+                        "title": "Layout",
+                        "path": "/docs/elements/layout"
+                    },
+                    {
+                        "title": "Meta Elements",
+                        "path": "/docs/elements/meta"
+                    },
+                    {
+                        "title": "Style",
+                        "path": "/docs/elements/style"
+                    },
+                    {
+                        "title": "Typography",
+                        "path": "/docs/elements/typography"
+                    },
+                    {
+                        "title": "Block",
+                        "path": "/docs/elements/block"
+                    },
+                    {
+                        "title": "Image",
+                        "path": "/docs/elements/image"
+                    },
+                    {
+                        "title": "Button",
+                        "path": "/docs/elements/button"
+                    },
+                    {
+                        "title": "Link",
+                        "path": "/docs/elements/link"
+                    }
+                ],
+                "redirectFrom": "/docs/elements",
+                "path": "/docs/elements/overview"
+            }
+        ]
+    }
+}

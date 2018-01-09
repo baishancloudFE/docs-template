@@ -1,0 +1,170 @@
+{
+    "data": {
+        "allSitePage": {
+            "totalCount": 32,
+            "edges": [
+                {
+                    "node": {
+                        "path": "/docs/getting-started"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/docs/getting-started/overview"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/docs/getting-started/usage"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/docs/getting-started/guide"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/docs/getting-started/gui"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/docs/email-structure"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/docs/email-structure/overview"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/docs/email-structure/heml"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/docs/email-structure/head"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/docs/email-structure/body"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/docs/email-structure/raw"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/docs/styling"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/docs/styling/using-css"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/docs/styling/targeting-clients"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/docs/styling/pseudo-elements"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/docs/elements"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/docs/elements/overview"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/docs/elements/layout"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/docs/elements/meta"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/docs/elements/style"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/docs/elements/typography"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/docs/elements/block"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/docs/elements/image"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/docs/elements/button"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/docs/elements/link"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/docs/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/404/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/faqs/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/editor/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/templates/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/404.html"
+                    }
+                }
+            ]
+        }
+    },
+    "pathContext": {}
+}
