@@ -6,20 +6,13 @@ import classnames from 'classnames'
 import styled, { ThemeProvider } from 'styled-components'
 
 import '../styles.css'
+import { pageConfig, themeConfig } from '../config'
 
-const theme = {
-  monospace: `'Source Code Pro', monospace`,
-  tablet: `only screen and (max-width: 800px)`,
-  mobile: `only screen and (max-width: 650px)`,
-  colors: {
-    primary: '#345',
-    text: '#333',
-  },
-}
+const theme = themeConfig
 
 const DefaultLayout = ({ children }) => (
   <div>
-    <Helmet title="Yaka" />
+    <Helmet title={pageConfig.title} />
     <ThemeProvider theme={theme}>{children()}</ThemeProvider>
   </div>
 )

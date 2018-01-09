@@ -3,6 +3,8 @@ import Link from 'gatsby-link'
 import classnames from 'classnames'
 import styled from 'styled-components'
 
+import { pageConfig } from '../config'
+
 const Logo = styled.h1`
   font-size: 1.5em;
   margin: 0;
@@ -35,6 +37,7 @@ const Header = styled.header`
   padding: 1.25em 2em;
   z-index: 99;
   height: auto;
+  box-shadow: 1px 1px 1px #999;
 
   ul {
     padding: 0;
@@ -44,7 +47,7 @@ const Header = styled.header`
 
   li {
     display: inline-block;
-    margin: 0 0.5em;
+    margin: 0 1em;
   }
 
   a {
@@ -89,7 +92,7 @@ export default ({ currentPath, fixed, nav }) => (
     <Header fixed={fixed}>
       <Logo>
         <Link to="/">
-          SL 
+          SL
         </Link>
       </Logo>
       {!nav ? (
@@ -118,7 +121,7 @@ export default ({ currentPath, fixed, nav }) => (
           </li>
 
           <li>
-            <a href="https://github.com/SparkPost/heml">
+            <a href={pageConfig.github} target="_blank">
               <GithubIcon />
               GitHub
             </a>
